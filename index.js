@@ -6,7 +6,7 @@ const render = (root) => {
 }
 
 const state = {
-  families: null;
+  families: null
 };
 
 $( _ => {
@@ -15,7 +15,11 @@ $( _ => {
       return alert(error.message);
     }
     state.families = json.results;
+    console.log(json.results);
+    console.log(json.results[0].name);
+
     const root = $("#root");
     render(root);
+
   });
 })
